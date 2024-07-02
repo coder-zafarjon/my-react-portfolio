@@ -1,0 +1,37 @@
+.Card {
+	width: 100%;
+	position: relative;
+}
+
+.Card img {
+	display: block;
+	max-width: 100%;
+	transition: var(--transition-200);
+	filter: brightness(90%);
+	cursor: pointer;
+	border: 5px solid transparent;
+	position: relative;
+}
+
+.Card img:hover {
+	filter: grayscale(100%) brightness(80%);
+	transform: scale(0.97);
+	border: 5px solid whitesmoke; 
+}
+
+.Card .view {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: var(--gradient-1);
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: none;
+}
+
+.Card:hover .view {
+	display: block;
+}

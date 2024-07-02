@@ -1,0 +1,9 @@
+.Projects {
+	padding: var(--paddingDesktop);
+}
+
+@media (max-width: 768px) {
+	.Projects {
+		padding: var(--paddingTablet);
+	}
+}

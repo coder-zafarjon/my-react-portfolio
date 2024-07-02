@@ -1,0 +1,19 @@
+.Title {
+	font-size: 36px;
+	font-weight: bold;
+	padding: 3px 30px;
+	margin-top: 50px;
+}
+
+.Subtitle {
+	font-size: 15px;
+	font-weight: lighter;
+	padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+	.Title,
+	.Subtitle {
+		padding: 3px 15px;
+	}
+}

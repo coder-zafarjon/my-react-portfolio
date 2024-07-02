@@ -1,0 +1,151 @@
+.Navbar {
+	position: sticky;
+	padding: var(--paddingDesktop);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	z-index: 33;
+	backdrop-filter: blur(20px);
+}
+
+.logo {
+	font-weight: bold;
+	font-style: normal;
+	text-transform: lowercase;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #ffffff15;
+	border-radius: 10px;
+	padding: 5px;
+	transition: var(--transition-200);
+	z-index: 44;
+}
+
+.logo:hover {
+	background: var(--gradient-1);
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.nav-links a {
+	font-family: var(--dmMono) !important;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	position: relative;
+	transition: var(--transition-200);
+	text-transform: uppercase;
+	font-weight: lighter;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 16px;
+	border-radius: 10px;
+	color: var(--textColor);
+}
+
+.nav-links a:hover {
+	background: #ffffff15;
+	backdrop-filter: blur(10px);
+}
+
+.nav-links a.active {
+	background: #ffffff15;
+	backdrop-filter: blur(10px);
+}
+
+/* .nav-links a.active::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: var(--textColor);;
+	bottom: -5px;
+} */
+
+.Navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu-button {
+	width: 30px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 35px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	transition: var(--transition-200);
+	background: #ffffff15;
+	margin-left: 18px;
+	display: none;
+	z-index: 44;
+	border-radius: 5px;
+}
+
+.menu-button:hover {
+	background: var(--gradient-1);
+}
+
+.social-navbar {
+	margin-top: 30px;
+	display: none !important;
+}
+
+@media (max-width: 769px) {
+	.Navbar {
+		padding: 15px;
+	}
+
+	.nav-links {
+		width: 100%;
+		background: var(--mainColor);
+		position: absolute;
+		left: 0;
+		top: -10px;
+		right: 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 0;
+		padding: 80px 0;
+		transform: translateY(-100%);
+	}
+
+	.nav-links.open {
+		transform: translateY(0%);
+		transition: all 400ms;
+	}
+
+	.nav-links a {
+		width: 100%;
+		padding: 10px;
+		transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	.nav-links a:hover {
+		background: var(--white-003);
+	}
+
+	.nav-links a.active::before {
+		display: none;
+	}
+
+	.menu-button {
+		display: block;
+	}
+
+	.social-navbar {
+		display: flex !important;
+		gap: 5px;
+	}
+}

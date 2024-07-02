@@ -1,0 +1,75 @@
+.HeroSection {
+	width: 100%;
+	background: var(--dark-075);
+}
+
+.home-content {
+	width: 100%;
+	height: 100vh;
+	/* backdrop-filter: blur(65px); */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: var(--paddingDesktop);
+	text-align: center;
+	position: relative;
+}
+
+.layer {
+	position: absolute;
+	width: 900px;
+	z-index: 0;
+	filter: blur(2px);
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+
+.home-content p {
+	font-size: 35px;
+}
+
+.home-content p span {
+	font-weight: 200;
+}
+
+.home-content p b {
+	text-transform: uppercase;
+	background: var(--gradient-2);
+	background-clip: text;
+	font-size: 50px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.home-buttons {
+	margin-top: 50px;
+	display: flex;
+	gap: 14px;
+}
+
+@media (max-width: 768px) {
+
+	.home-content {
+		padding: var(--paddingTablet);
+	}
+
+	.home-content p {
+		font-size: 26px;
+	}
+
+	.home-content p b {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 380px) {
+	.home-content p {
+		font-size: 22px;
+	}
+
+	.home-content p b {
+		font-size: 33px;
+	}
+}

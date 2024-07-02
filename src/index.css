@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root {
+	--mainColor: rgb(13, 13, 13);
+	--textColor: rgb(231, 231, 231);
+	--gradient-1: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+	--gradient-2: linear-gradient(76.9deg, #ff5a5a 27.2%, #8205ff 79.9%);
+	--kumbhSans: 'Kumbh sans', sans-serif;
+	--dmMono: 'DM Mono', monospace;
+	--paddingDesktop: 15px 30px 15px 30px;
+	--paddingTablet: 15px;
+	--transition-200: 200ms;
+	--dark-075: rgba(0, 0, 0, 0.75);
+	--white-02: rgba(255, 255, 255, 0.2);
+	--white-008: rgba(255, 255, 255, 0.08);
+	--white-003: rgba(255, 255, 255, 0.03);
+	--timeScroll: 50s;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--kumbhSans);
+	color: var(--textColor);
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden !important;
+	background: #10131e;
+}
+
+body {
+	max-width: 1400px;
+	margin: 0 auto;
+	background: var(--gradient-1);
+}
+
+.ProjectsSection,
+.ContactSection {
+	background: #10131e;
+}
+
+/* 
+.main {
+	width: 100%;
+	padding: 70px 25px 0 25px;
+} */
+
+.max-width {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.contact-social {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 50px;
+	padding: var(--paddingDesktop);
+}
+
+.contact-social a {
+	width: 70px;
+	height: 70px;
+	font-size: 50px;
+	background: var(--white-003);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--mainColor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #ffffff15;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--gradient-1);
+}
